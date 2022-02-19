@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* Here's some environment setup,
+   scroll down for the interesting parts */
+
+   @import url('https://fonts.googleapis.com/css?family=Lato:200');
+
+   html, body {
+     width: 100%;
+     height: 100%;
+   }
+   
+   body {
+     background-image: url(https://images.unsplash.com/photo-1515254100245-67228492bf65?ixlib=rb-0.3.5&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ&s=1b058fcd3bdba98711aa240123fca6b8);
+     background-position: center center;
+     background-size: 100%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
+   .container {
+    display: flex;
+    width: 100%;
+    padding: 4% 2%;
+    box-sizing: border-box;
+    height: 100vh;
+  }
+  
+  .box {
+    flex: 1;
+    overflow: hidden;
+    transition: .5s;
+    margin: 0 2%;
+    box-shadow: 0 20px 30px rgba(0,0,0,.1);
+    line-height: 0;
+  }
+  
+  .box > img {
+    width: 200%;
+    height: calc(100% - 10vh);
+    object-fit: cover; 
+    transition: .5s;
+  }
+  
+  .box > span {
+    font-size: 3.8vh;
+    display: block;
+    text-align: center;
+    height: 10vh;
+    line-height: 2.6;
+  }
+  
+  .box:hover { flex: 1 1 50%; }
+  .box:hover > img {
+    width: 100%;
+    height: 100%;
+  }
+   .animated-box {
+     font-family: 'Lato';
+     color: #ffffff;
+     padding: 30px;
+     text-align: center;
+     border-radius: 4px;
+   }
+   
+   .animated-box h1 {
+     font-weight: 200;
+     font-size: 40px;
+     text-transform: uppercase;
+   }
+   
+   .animated-box p {
+     font-weight: 200;
+   }
+   
+   /* The animation starts here */
+   .animated-box {
+     position: relative;
+   }
+   
+   .animated-box:after {
+     content: '';
+     position: absolute;
+     top: 0;
+     left: 0;
+     right: 0;
+     bottom: 0;
+     border-radius: 4px;
+     background: linear-gradient(120deg, #00F260, #0575E6, #00F260);
+     background-size: 300% 300%;
+     clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+   }
+   
+   .animated-box.in:after {
+     animation: frame-enter 1s forwards ease-in-out reverse, gradient-animation 4s ease-in-out infinite;
+   }
+   
+   /* motion */
+   @keyframes gradient-animation {
+     0% {
+       background-position: 15% 0%;
+     }
+     50% {
+       background-position: 85% 100%;
+     }
+     100% {
+       background-position: 15% 0%;
+     }
+   }
+   
+   @keyframes frame-enter {
+     0% {
+       clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), 3px calc(100% - 3px), 3px 100%, 100% 100%, 100% 0%, 0% 0%);
+     }
+     25% {
+       clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) calc(100% - 3px), calc(100% - 3px) 100%, 100% 100%, 100% 0%, 0% 0%);
+     }
+     50% {
+       clip-path: polygon(0% 100%, 3px 100%, 3px 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, calc(100% - 3px) 3px, 100% 0%, 0% 0%);
+     }
+     75% {
+       -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 3px, 3px 0%, 0% 0%);
+     }
+     100% {
+       -webkit-clip-path: polygon(0% 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 3px 100%, 0% 100%);
+     }
+   }
+   .block {
+       align-items: center;
+       font-size: 72px;
+       color: white;
+       text-align: center;
+    position: relative;
+    margin: 300px auto 0;
+    width: 700px;
+    height: 400px;
+    background: linear-gradient(0deg, #000, #272727);
+  }
+  
+  .block:before, .block:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    animation: steam 20s linear infinite;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .block:after {
+    filter: blur(50px);
+  }
+        
+    </style>
+</head>
+<body>
+    <div class="animated-box in">
+        <h1>Animated border</h1>
+        <p>Without fixed width or static background</p>
+      </div>
+      <div class="block">HI</div>
+      <div class="container">
+        <div class="box">
+          <img src="https://source.unsplash.com/1000x800">
+          <span>CSS</span>
+        </div>
+        <div class="box">
+          <img src="https://source.unsplash.com/1000x802">
+          <span>Image</span>
+        </div>
+        <div class="box">
+          <img src="https://source.unsplash.com/1000x804">
+          <span>Hover</span>
+        </div>
+        <div class="box">
+          <img src="https://source.unsplash.com/1000x806">
+          <span>Effect</span>
+        </div>
+      </div>
+      
+</body>
+
+</html>

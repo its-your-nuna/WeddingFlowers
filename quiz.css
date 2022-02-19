@@ -1,0 +1,312 @@
+*{
+    margin: 0,auto;
+}
+body{
+  background-color: #FFF5FD;
+  margin: 0 auto;
+}
+.menuM{
+  position: fixed;
+  z-index: 9999;
+  width:100%;
+  top: 0%;
+  background-color: white;
+}
+.discount{
+  width: 100%;
+  background-color: #ff9aa2;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+.logoS img{
+  width: 200px;
+  margin-left: 800px;
+}
+.pp1{
+  position: absolute;
+  width: 200px;
+  margin-left: 10px;
+  display: none;
+}
+.icons1{
+  display: flex;
+  justify-content: right;
+}
+.menu1{
+  margin-bottom: 15px;
+}
+.menu1 ul{
+  align-items: center;
+  width:80%;
+  margin-left: 5%;
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+}
+.menu1 ul{
+  margin-top: 0px;
+}
+.menu1 a{
+  text-decoration: none;
+  color: black;
+}
+.menu1 a:hover{
+  color: #ff9aa2;
+}
+img{
+  height: auto;
+}
+.back{
+  background-color: #ff9aa2;
+  background-size: cover;
+  padding-top: 50px;
+  padding-bottom: 100px;
+  max-height: 800px;
+  margin-top: 200px;
+}
+.header{
+  background-image: url(images/f15.jpg);
+  margin-left: 50%;
+  text-align:left;
+  white-space: pre-wrap;
+  width: 400px;
+    height: 400px;
+  color: #003f63;
+  font-style: bold;
+  border-top-left-radius: 100%;
+  border-bottom: 2px solid;
+  border-right: 2px solid;
+  background-color: #ff9aa2;
+
+}
+.fon{
+  padding: 10px 5px;
+  margin-left: -10%;
+  margin-right: 10%;
+  /* margin-bottom: 50%; */
+  border:1px solid;
+  
+}
+#one{
+  font-size: 30px;
+  font-weight: 1000;
+}
+#second{
+  font-weight: 500;
+  font-size: 30px;
+}
+.quiz{
+  align-items: center;
+}
+#radio{
+  height: 40px;
+}
+  .question{
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 100px;
+    font-size: 46px;
+    width: 50%;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Dancing Script', cursive;
+    font-style: bold;
+    padding: 15px 25px;
+    background-color: #ff9aa2;
+    color: white;
+    border-top-right-radius: 50px;
+	  border-bottom-left-radius:  50px ;
+  }
+  .answers {
+    align-items: center;
+    justify-content: center;
+    color:#005A8D;
+    margin-top: 1.2%;
+    margin-left: 28%;
+    width: 47%;
+      display: inline-flex;
+      justify-content: space-between;
+      font-size: 28px;
+  }
+
+  .quizcontainer{
+    border: 1px solid;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  }
+  #submit{
+    border:1px solid #ff9aa2;
+    margin-left: 25%;
+    margin-top: 50px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #ff9aa2;
+    background-color: white;
+    padding: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  #submit:hover{
+    background-color: #ff9aa2;
+    color: white;
+  }
+  #results{
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    padding: 25px 35px;
+    border: 1px solid;
+    font-size: 36px;
+    margin-top: 50px;
+    margin-left: 25%;
+    color: white;
+    font-family: 'Corinthia', cursive;
+    font-family: 'Dancing Script', cursive;
+    background: #ff9aa2;
+background: linear-gradient(90deg, #ff9aa2 0%, #005A8D 100%);
+  }
+  .footer{
+    display: flex;
+    justify-content: space-around;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 12px;
+  }
+  .p1{
+    font-weight: 700;
+  }
+  .end{
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  .icons{
+    display: flex;
+    justify-content: center;
+  }
+  .t2{
+    text-align: center;
+    margin-top: 10px;
+  }
+  @viewport {
+    width: device-width ;
+    zoom: 1.0 ;
+  }
+ 
+@media screen and (max-width: 1300px) {
+  /* comes into effect for screens less than or equal to 320 pixels */
+  .header{
+    width: 500PX;
+    height: 500PX;
+  }
+  .fon{
+    padding: 5px 10px;
+  }
+  #one{
+    font-size: 50px;
+    font-weight: 1000;
+  }
+  #second{
+    font-weight: 500;
+    font-size: 30px;
+  }
+  .question{
+    
+    margin-left: 5%;
+  }
+  .answers{
+    margin-left: 7%;
+  }
+  #results{
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 1000px) {
+  /* comes into effect for screens less than or equal to 320 pixels */
+  .header{
+    width: 500PX;
+    height: 500PX;
+  }
+  .fon{
+    padding: 5px 10px;
+  }
+  #one{
+    font-size: 50px;
+    font-weight: 1000;
+  }
+  #second{
+    font-weight: 500;
+    font-size: 30px;
+  }
+  .question{
+    font-size: 30px;
+    margin-left: 5%;
+  }
+  .answers{
+    font-size: 15px;
+    margin-left: 7%;
+  }
+  #results{
+    margin-left: 5%;
+  }
+}
+@media screen and (max-width: 500px) {
+  /* comes into effect for screens less than or equal to 320 pixels */
+  .back{
+    background-size: 0%;
+  }
+  .header{
+    width: 250PX;
+    height: 250PX;
+  }
+  .fon{
+    padding: 0px 0px;
+  }
+  #one{
+    font-size: 20px;
+    font-weight: 1000;
+  }
+  #second{
+    font-weight: 500;
+    font-size: 15px;
+  }
+  .question{
+    font-size: 20px;
+    margin-left:7%;
+  }
+  .answers{
+    font-size: 10px;
+    margin-left: 15%;
+  }
+  #results{
+    margin-left: 2.5%;
+    font-size: 25px;
+    
+  }
+  #submit{
+    font-size: 10px;
+  }
+  
+}
+@media screen and (min-width: 321px) and (max-width: 480px) {
+  /* comes into effect for screens between 321 and 480 pixels (inclusive) */
+  #somethingorother {
+    width: 320px ;
+  }
+}
+@media screen and (min-width: 481px) {
+  /* comes into effect for screens larger than or equal to 481 pixels */
+  #somethingorother {
+    width: 480px ;
+  }
+}
+
+/* code that is here will apply to any screen size */
