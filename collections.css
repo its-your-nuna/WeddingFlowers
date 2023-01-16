@@ -2,9 +2,18 @@
 body{
     margin:0 auto;
 }
+.icons{
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin: auto;
+}
+.icons img{
+  width: 40px;
+  margin: 20px;
+}
 .menuM{
-  position: fixed;
-  z-index: 9999;
+  position: relative;
   width:100%;
   top: 0%;
   background-color: white;
@@ -21,65 +30,68 @@ body{
 
 .menu{
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
+  justify-content: flex-end;
+ 
 }
 .logoS img{
   width: 200px;
-  margin-left: 800px;
-}
-.pp1{
   position: absolute;
-  width: 200px;
-  margin-left: 10px;
-  display: none;
+  top: 45%;
+  left: 45%;
+  margin: -25px 0 0 -25px
+  
 }
+
 .icons1{
-  display: flex;
-  justify-content: right;
+  margin: 20px;
 }
+.icons1 img{
+  width: 30px; 
+  height: 30px; 
+  margin-left: 10px; 
+  margin-top: 20px;
+} 
+
 .menu1{
-  margin-bottom: 15px;
+  margin-top: 15px;
+  padding-bottom: 15px;
 }
 .menu1 ul{
   align-items: center;
-  width:80%;
-  margin-left: 5%;
   display: flex;
-  justify-content: space-around;
+  justify-content:center;
   list-style-type: none;
+  padding: 0;
 }
-.menu1 ul{
-  margin-top: 0px;
-}
+
 .menu1 a{
   text-decoration: none;
   color: black;
+  margin: 20px;
 }
 .menu1 a:hover{
   color: #ff9aa2;
 }
 
 .back{
-  margin-top: 200px;
+
     background-image: url(images/f15.jpg);
     background-size: cover;
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
     max-height: 800px;
   }
   .header{
     background-color: #ff9aa2;
     margin-left: 50%;
     text-align:left;
-    white-space: pre-wrap;
+    white-space:pre-wrap;
     width: 400px;
     height: 400px;
     color: #003f63;
     font-style: bold;
     border-top-left-radius: 100%;
-    border-bottom: 2px solid;
-    border-right: 2px solid;
+    
   }
   .fon{
     padding: 10px 0px;
@@ -91,22 +103,22 @@ body{
   #one{
     font-size: 35px;
     font-weight: 1000;
+    margin: 0;
   }
   #second{
     font-weight: 500;
     font-size: 25px;
+    margin: 0;
   }
 .container {
-  margin-left: 5%;
+    margin: auto;
     display: flex;
     width: 90%;
     padding: 4% 2%;
-    box-sizing: border-box;
-    height: 70vh;
+    
   }
   
   .box {
-    flex: 1;
     overflow: hidden;
     transition: .5s;
     margin: 0 2%;
@@ -182,24 +194,50 @@ body{
   @media screen and (max-width: 1000px) {
     /* comes into effect for screens less than or equal to 320 pixels */
     .header{
-      width: 500PX;
-      height: 500PX;
+      width: 350PX;
+      height: 300PX;
     }
     .fon{
       padding: 5px 10px;
     }
     #one{
-      font-size: 50px;
+      font-size: 20px;
       font-weight: 1000;
     }
     #second{
       font-weight: 500;
-      font-size: 30px;
+      font-size: 15px;
     }
 
   }
+  @media screen and (max-width: 800px) {
+  .footer{
+    display: flex;
+    justify-content: space-between;
+    
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 10px;
+    flex-wrap: wrap;
+    
+  }
+  .menu1 a{
+    font-size: 10px;
+    margin: 10px; 
+    padding: 0;
+  }
+  .box > span {
+    font-size: 2vh;
+   
+  }
+  
+}
   @media screen and (max-width: 500px) {
     /* comes into effect for screens less than or equal to 320 pixels */
+    .container{
+     
+      height: 50vh;
+    }
     .back{
       background-size: 100%;
     }
@@ -218,6 +256,31 @@ body{
       font-weight: 500;
       font-size: 15px;
     }
+    .discount{
+      font-size: 12px;
+      padding: 8px;
+    }
+    .logoS img{
+      left: 40%;
+      top: 45%;
+      width: 150px;
+    }
+    .icons1{
+      margin: 10px;
+    }
+    .icons1 img{
+      width: 25px; 
+      height: 25px; 
+      margin-left: 10px; 
+      margin-top: 20px;
+    } 
+    .icons img{
+      width: 25px;
+      margin: 10px;
+     }
+     .t2{
+      font-size: 12px;
+     }
 
     
   }

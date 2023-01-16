@@ -3,64 +3,76 @@ body{
     background-color: #FFF5FD;
 }
 
+.icons{
+  display: flex;
+  justify-content: space-around;
+  width: 300px;
+  margin: auto;
+}
+.icons img{
+  width: 40px;
+  margin: 20px;
+}
 .menuM{
-    position: fixed;
-    z-index: 9999;
-    width:100%;
-    top: 0%;
-    background-color: white;
-  }
-  .discount{
-    width: 100%;
-    background-color: #ff9aa2;
-    color: white;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    font-weight: 700;
-    text-align: center;
-  }
+  position: relative;
+  width:100%;
+  top: 0%;
+  background-color: white;
+}
+.discount{
+  width: 100%;
+  background-color: #ff9aa2;
+  color: white;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.menu{
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+.logoS img{
+  width: 200px;
+  position: absolute;
+  top: 45%;
+  left: 45%;
+  margin: -25px 0 0 -25px
   
-  .menu{
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-  }
-  .logoS img{
-    width: 200px;
-    margin-left: 800px;
-  }
-  .pp1{
-    position: absolute;
-    width: 200px;
-    margin-left: 10px;
-    display: none;
-  }
-  .icons1{
-    display: flex;
-    justify-content: right;
-  }
-  .menu1{
-    margin-bottom: 15px;
-  }
-  .menu1 ul{
-    display: flex;
-    justify-content: space-around;
-    margin-left: 30px;
-    margin-right: 50px;
-    list-style-type: none;
-  }
-  .menu1 ul{
-    margin-top: 0px;
-  }
-  .menu1 a{
-    text-decoration: none;
-    color: black;
-  }
-  .menu1 a:hover{
-    color: #ff9aa2;
-  }
+}
+
+.icons1{
+  margin: 20px;
+}
+.icons1 img{
+  width: 30px; 
+  height: 30px; 
+  margin-left: 10px; 
+  margin-top: 20px;
+} 
+
+.menu1{
+  margin-top: 15px;
+  padding-bottom: 15px;
+}
+.menu1 ul{
+  align-items: center;
+  display: flex;
+  justify-content:center;
+  list-style-type: none;
+  padding: 0;
+}
+.menu1 a{
+  text-decoration: none;
+  color: black;
+  margin: 20px;
+}
+.menu1 a:hover{
+  color: #ff9aa2;
+}
 .header{
-    margin-top: 200px;
     text-align: center;
     background-image: url(" https://images.unsplash.com/photo-1463043254199-7a3efd782ad1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80");
     background-size: cover;
@@ -234,25 +246,101 @@ textarea {
     text-align: center;
     margin-top: 10px;
   }
-  @media screen and (max-width: 900px) {
-    .contacts{
-      margin-left: 0%;
-    }
-    .menuM{
-     width: 900px;
-     
-  }
-  #im{
-    max-width: 200px;
-  }
-  #mes{
-    font-size: 18px;
+@media screen and (max-width: 800px) {
+  .search__input {
+    width: 60%;
+    padding: 6px 20px;
+    font-size: 14px;
+    line-height: 18px;
+    color: black;
+    background-color: transparent; /*прозрачный*/
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 95% center;/*значок на край*/
+    border-radius: 50px;
+    border: 2px solid black;
+   
 }
-.name1{
-  width: 300px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+#one{
+  font-size: 40px;
+ 
+}
+#second{
+  
+  font-size: 30px;
+}
+.faq-page{
+  font-size: 20px;
 }
   
+.faq-body{
+  font-size: 12px;
+  width: 70%;
+}
+#con{
+  font-size: 20px;
+}
+#im{
+ max-width: 0px;
+}
+.contacts{
+  margin-left: 0%;
+  display: block;
+
+}
+textarea{
+  width: 300px;
+  margin: 20px;
+}
+
+  .name1{
+   flex-direction: column;
+   width: 300px;
+  
+  }
+  #but{
+    position: relative;
+    margin: 20px;
+  }
+    
+ #mes{
+  font-size: 20px;
+}
+  
+} 
+@media screen and (max-width: 500px) {
+  
+  .logoS img{
+    left: 40%;
+    top: 50%;
+    width: 150px;
+  }
+  .icons1{
+    margin: 10px;
+  }
+  .icons1 img{
+    width: 25px; 
+    height: 25px; 
+    margin-left: 10px; 
+    margin-top: 20px;
+  } 
+  .icons img{
+    width: 25px;
+    margin: 10px;
+   }
+   .t2{
+    font-size: 12px;
+   }
+   .menu1 a{
+    font-size: 10px;
+    margin: 10px; 
+    padding: 0;
+  }
+  #one{
+    font-size: 30px;
+  }
+  #second{
+    
+    font-size: 20px;
+  }
 }

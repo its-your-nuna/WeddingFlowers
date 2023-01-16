@@ -32,7 +32,7 @@ form{
    left: 35%;
     height: 520px;
     width: 400px;
-     background-image: url(images/f15.jpg);
+     background-image: url(images/pexels.jpg);
    /* background: rgb(238,174,202);
     background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);*/
     position: absolute;
@@ -48,6 +48,7 @@ font-family: 'Prompt', sans-serif;
     outline: none;
     border: none;
 }
+
 form *{
     font-family: 'Poppins',sans-serif;
     color: #ffffff;
@@ -114,6 +115,35 @@ input[type=checkbox]{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
   }
+  @media screen and (max-width: 500px) {
+
+form {
+top: 20%;
+left: 20%;
+margin: auto;
+padding: 0px 35px;
+height: 350px;
+width: 120px;
+
+}
+#h3{
+    font-size: 20px;
+}
+#label{
+    margin-top: 5px;
+    font-size: 10px;
+}
+button{
+    margin-top: 10px;
+    font-size: 10px;
+    padding: 5px 0;
+}
+.signup{
+    
+    font-size: 10px;
+}
+
+}
   
 
   
@@ -123,20 +153,20 @@ input[type=checkbox]{
 <body>
     <div class="reg">
     <form>
-        <h3>Login Here</h3>
+        <h3 id="h3">Login Here</h3>
 
-        <label for="username">Username</label>
+        <label id="label" for="username">Username</label>
         <input type="text" placeholder="Email or Phone" id="username">
 
-        <label for="password">Password</label>
+        <label id="label" for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
 
         <button onclick="myFunction()">Log In</button>
         <div class="signup">
         <p>Don't have an account yet?</p>
-        <a href="#sign" onclick="document.getElementById('sign').style.display='block'">Sign Up</a>
+        
     </div>
-        <label>
+        <label id="label">
             <input type="checkbox" checked="checked" name="remember"> Remember me
           </label>
     </form>
@@ -144,12 +174,12 @@ input[type=checkbox]{
         <span onclick="document.getElementById('sign').style.display='none'" class="close" title="Close Modal">&times;</span>
         <h3>Sign Up</h3>
 
-        <label for="username">Username</label>
+        <label id="label" for="username">Username</label>
         <input type="text" placeholder="Email or Phone" id="username">
 
-        <label for="password">Password</label>
+        <label id="label" for="password">Password</label>
         <input type="password" placeholder="Password" id="password">
-        <label for="password">Repeat Password</label>
+        <label id="label" for="password">Repeat Password</label>
         <input type="password" placeholder="Password" id="password">
         <button onclick="myFunction2()">Sign Up</button>
     </form>
